@@ -17,7 +17,7 @@ $(function(){
       var id = response.list.id;
 
 
-      $('#lists').append('<div class="sandwich" id="list-"' + id + '><h2>' + name + '</h2><button class="delete-list-btn">bye</button><ul></ul></div>');
+      $('#lists').append('<div class="sandwich" id="list-' + id + '"><h2>' + name + '</h2><button class="delete-list-btn">bye</button><ul></ul></div>');
       $('#select_list').append('<option value='+ id + '>' + name + '</option>');
 
     })
