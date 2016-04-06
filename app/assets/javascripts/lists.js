@@ -9,10 +9,12 @@ $(function(){
       url: '/lists',
       method: 'POST',
       data: {name: list}
+      debugger
     }).success(function(response, settings){
       var name = response.list.name;
       var id = response.list.id;
-      $('ul').append('<li>' + name + '</li>')
+
+      $('#lists').append('<div id = "list-"' + id + '"<h2>' + name + '</h2>')
       $('#select_list').append('<option value='+ id + '>' + name + '</option>')
 
     })
