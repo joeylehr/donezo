@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  background: rgb(0, 121, 191);
+}
+
+.sandwich {
+  background: rgb(226, 228, 230);
+  display: inline-block;
+  border: 3px solid red;
+  padding: 5px 5px;
+  margin: 10px;
+  float: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+.formtime {
+  margin: 20px 20px;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+

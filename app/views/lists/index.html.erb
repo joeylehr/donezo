@@ -1,6 +1,7 @@
 <div id="wrapper">
-   <h1>I HAVE SO MUCH TO DO!</h1>
+   <h1>donezo</h1>
 
+   <div class="formtime">
    <form id="add_list" action="#" method="post">
      <label for="list_title">Add a new list:</label>
      <input type="text" id="list_title" name="list_title" placeholder="title">
@@ -20,26 +21,32 @@
 
     <label for="task_priority">Priority</label>
      <select id="task_priority" value="Priority"> 
-     <option value = "High">High</option>
-     <option value = "Medium" selected = "selected">Medium</option>
-     <option value = "Low">Low</option>
+     <option value="High">High</option>
+     <option value="Medium" selected="selected">Medium</option>
+     <option value="Low">Low</option>
      </select>
 
      <input type="submit" value="(+) add">
    </form>
+   </div>
    
-   <section id="lists"></section>
-    
+   <section id="lists"> 
+    <div class="row">
+  
     <% @lists.each do |list| %>
-    <div id = "list-<%=list.id%>">
-    <h2> <%= list.name %></h2>
-    <ul>
-    <%list.tasks.each do |task|%>
-      <li><%=task.name%>, Priority: <%=task.priority%></li>
-    <%end%>
-    </ul>
-    </div>
+      <div class="sandwich" id="list-<%=list.id%>">
+        <h2> <%= list.name %></h2>
+        <button class="delete-list-btn">bye</button>
+      <ul>
+      <%list.tasks.each do |task|%>
+        <li><p><strong><%=task.name.capitalize%></strong> Priority: <%=task.priority%></p>
+          <button class="delete-task-btn">byeeeee</button>
+        </li>
+      <%end%>
+      </ul>
+      </div>
     <% end %>
-
-
+    </div>
+</section> 
+    
  </div>
