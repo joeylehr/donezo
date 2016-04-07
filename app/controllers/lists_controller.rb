@@ -13,7 +13,6 @@ def create
 end
 
 def destroy
-  binding.pry
   @list = List.find(params[:id])
   @list.destroy
 end

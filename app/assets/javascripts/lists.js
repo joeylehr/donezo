@@ -23,8 +23,15 @@ $(function(){
     })
   })
     $('.delete-list-btn').click(function(event){
+    var div_id
+    var list_id
     event.preventDefault();
-    
+    div_id = $(this).parent().attr("id")
+    list_id = div_id[(div_id.length-1)];
+      $.ajax({
+      url: '/lists/' + list_id,
+      method: 'DELETE'
+    })
     $(this).parent().remove();
-  })
+})
 })
