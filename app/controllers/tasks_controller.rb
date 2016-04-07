@@ -9,6 +9,12 @@ class TasksController < ApplicationController
    render json: {task: @task}
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @list = @task.list
+    @task.destroy
+  end
+
   private
 
   def task_params

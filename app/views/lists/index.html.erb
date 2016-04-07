@@ -36,11 +36,11 @@
     <% @lists.each do |list| %>
       <div class="sandwich" id="list-<%=list.id%>">
         <h2> <%= list.name %></h2>
-        <button class="delete-list-btn">bye</button>
+        <button class="delete-list-btn">donezo</button>
       <ul>
       <%list.tasks.each do |task|%>
         <li id="task-<%=task.id%>"><p><strong><%=task.name.capitalize%></strong> Priority: <%=task.priority%></p>
-          <button class="delete-task-btn">byeeeee</button>
+          <button class="delete-task-btn">donezo</button>
         </li>
       <%end%>
       </ul>
