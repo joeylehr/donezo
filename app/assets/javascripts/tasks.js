@@ -18,7 +18,7 @@ $(function(){
           priority = response.task.priority,
           list_id = response.task.list_id;
 
-      $("#list-" + list_id + " ul").append('<li><p><strong>' + name + '</strong> Priority: ' + priority + '</p><button class="delete-task-btn">byeeeee</button></li>');
+      $("#list-" + list_id + " ul").append('<li id="task-' + task_id + '"><p><strong>' + name + '</strong> Priority: ' + priority + '</p><button class="delete-task-btn">byeeeee</button></li>');
     })
   })
 

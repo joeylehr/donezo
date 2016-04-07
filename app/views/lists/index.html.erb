@@ -39,7 +39,7 @@
         <button class="delete-list-btn">bye</button>
       <ul>
       <%list.tasks.each do |task|%>
-        <li><p><strong><%=task.name.capitalize%></strong> Priority: <%=task.priority%></p>
+        <li id="task-<%=task.id%>"><p><strong><%=task.name.capitalize%></strong> Priority: <%=task.priority%></p>
           <button class="delete-task-btn">byeeeee</button>
         </li>
       <%end%>

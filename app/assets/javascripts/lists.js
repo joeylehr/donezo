@@ -21,6 +21,10 @@ $(function(){
       $('#select_list').append('<option value='+ id + '>' + name + '</option>');
 
     })
-
+  })
+    $('.delete-list-btn').click(function(event){
+    event.preventDefault();
+    
+    $(this).parent().remove();
   })
 })

@@ -12,6 +12,12 @@ def create
   render json: {list: @list}
 end
 
+def destroy
+  binding.pry
+  @list = List.find(params[:id])
+  @list.destroy
+end
+
 private
 
 def list_params
